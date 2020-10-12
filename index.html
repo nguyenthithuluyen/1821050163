@@ -1,76 +1,551 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi-VN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="StyleSheet" href="./css/style.css">
+    <title>Review Food</title>
+    <style>
+        {
+            box-sizing:border-box;
+        }
+        body{
+            margin:0;
+        }
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        input[type-text]{
+        width:100%;
+        box-sizing: border-box;
+        border:3px solid #CCC;
+        border-radius:20px;
+        font-size:16px;
+        background-color:white;
+        background-repeat:no-repeat;
+        padding: 10px 20px 12px 40px;
+        }
+        .box1{
+            float: left;
+            width:30%;
+            margin-bottom: -15px;
+        }
+        .box2{
+            width:130px;
+            float: left;
+            width:35%;
+            padding:50px;
+            height:100px;
+        }
+        
+        .timkiem::after{
+            overflow: hidden;
+            content: "";
+            clear: both;
+            display:table;
+        }
+        .menu{
+            overflow:hidden;
+            font-family:Arial, Helvetica, sans-serif;
+            margin:0px auto;
+            background:#eceae900;
+        }
+        .menu a{
+            float:right;
+            font-size:16px;
+            color:white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            background-color: white;
+        }
+        .dropdown{
+            float:left;
+            overflow: hidden;
+            background: #eca969;
+        }
+        .dropdown .dropbtn{
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font: inherit;
+            margin: 0;
+        }
+        .menu a:hover, .dropdown:hover .dropbtn:hover{
+            background-color: #FF0000;
+        } 
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            box-shadow: 1;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        .column{
+            float:left;
+            width: 15%;
+            padding: 5px;
+            background-color: #e1e42abe;
+            height: auto;
+        }
+        .column h3{
+            text-align: center;
+            margin: 5px;
+        }
+        .column a {
+            float: none;
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .column a:hover{
+            background-color: #696969;
+            color: white;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .sp{
+            margin-left: 20px;
+            overflow: hidden;
+            float: left;
+            margin-bottom:0px ;
+        }
+        .ten{
+            width: 290px;
+            height: 150px;
+            margin-left: 20px;
+            overflow: hidden;
+            float: left;
+            margin-bottom: 5px;
+        }
+        .tensp{
+            text-align: center;
+            font-family: "Lucida Console", Courier, monospace;
+            color: tomato;
+        }
+        .giasp{
+            text-align: right;
+            font-size: 16px;
+            font-family: "Lucida Console", Courier, monospace;
+            color:rgb(241, 7, 7);
+        }
+        .ten button{
+            color:wheat;
+            text-align: center;
+            background: #e97407;
+            float: right;
+            border: 2px solid #888888;
+        }
+        .tensp{
+            text-align: center;
+            font-family:"Times New Roman", Times, serif;
+            font-size:17px;
+            color: #2F4F4F#008080;
+        }
+        .chantrang{
+            font-family: "Lucida Console", Courier,monospace;
+            background: #e97407;
 
+            height: auto;
+                overflow: hidden;
+        content: "";
+        clear: both;
+        display:table;
+        color:wheat;
+        }
+        .chan1{
+            float: left;
+            width: 20%;
+            padding: 30px;
+        }
+        .chan2{
+            float: left;
+            width: 20%;
+            padding: 30px;
+        }           
+        .chan3{
+            float: left;
+            width: 20%;
+            padding: 30px;
+        }
+        .chan4{
+            float: left;
+            width: 20%;
+            padding: 30px;
+        }
+
+    </style>
+
+   
+    
 </head>
 
 <body>
-    <header>
-        <h1>MySite</h1>
-        <h3>Slogan go here...</h>
-    </header>
-    <nav>
-        <ul>
-            <li><a data-section="home">Home</a></li>
-            <li><a data-section="services">Services</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Products</a>
-                <div class="dropdown-content">
-                    <a data-section="link1">Link 1</a>
-                    <a data-section="link2">Link 2</a>
-                    <a data-section="link3">Link 3</a>
+    <div class="container">
+        <div class="timkiem">
+            <div class="box1">
+                <a href="#"><img src = "images/logo2.png"s alt="" width="300" height="150" style="float:right"/></a>
+            </div>
+            <div class="box2">
+                <form>
+                    <input type="text" name="search" placeholder="Tìm kiếm..."/>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <div class="menu">
+                <ul>
+                <div class="dropdown">
+                    <a class="dropbtn" href="#home">GIỚI THIỆU</a>
                 </div>
-            </li>
-            <li style="float:right"><a data-section="about">About us</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">ĐẶC SẢN MIỀN BẮC
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <div class="column">
+                            <h3>Món Ăn</h3>
+                        <a href="#">Phở Hà Nội</a>
+                        <a href="#">Bún chả Hà Nội</a>
+                        <a href="#">Thịt trâu gác bếp</a>
+                        <a href="#">Bún đậu mắm tôm</a>
+                        <a href="#">Cơm lam</a>
+                        <a href="#">Cốm làng Vòng</a>
+                        <a href="#">Cá kho làng Vũ Đại Hà Nam</a>
+                        <a href="#">Chả mực Hạ Long</a>
+                        <a href="#">Vịt cỏ Vân Đình</a>
+                        <a href="#">Bún cá cay Hải Phòng</a>
+                        <a href="#">Thịt dê Ninh Bình</a>
+                    </div>
+                    <div class="column">
+                        <h3>Đồ Uống</h>
+                        <a href="#">Trà sen</a>
+                        <a href="#">Rượu San Lùng</a>
+                        <a href="#">Rượu ngô</a>
+                        <a href="#">Rượu cần</a>
+                        <a href="#">Cà phê trứng Hà Nội</a>
+                        <a href="#">Rượu nếp</a>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">ĐẶC SẢN MIỀN TRUNG
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3>Món ăn</h3>
+                            <a href="#">Bún bò Huế</a>
+                            <a href="#">Mì Quảng</a>
+                            <a href="#">Bánh căn</a>
+                            <a href="#">Bánh xèo</a>
+                            <a href="#">Lẩu thả Phan Thiết</a>
+                            <a href="#">Cao lầu</a>
+                            <a href="#">Bánh canh cá lóc</a>
+                            <a href="#">Cơm, Bún hến</a>
+                            <a href="#">Cơm gà Tam kỳ - Quảng Nam</a>
+                            <a href="#">Bánh canh hẹ Phú Yên</a>
+                            <a href="#">Gỏi cá Nam Ô - Đà Nẵng</a>
+            
+                        </div>
+                        <div class="column">
+                            <h3>Đồ Ăn Vặt</h3>
+                            <a href="#">Kẹo Cu Đơ</a>
+                            <a href="#">Mứt rong sụn Phan Rang</a>
+                            <a href="#">Bánh ít lá gai</a>
+                        </div>
+                        <div class="column">
+                            <h3>Đồ Uống</h3>
+                            <a href="#">Trà Cung đình Huế</a>
+                            <a href="#">Quế Trà Bồng</a>
+                        </div>
+
+            </div>
+            </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">ĐẶC SẢN MIỀN NAM
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3>Món ăn</h3>
+                            
+                            <a href="#">Nem Lai Vung</a>
+                            <a href="#">Mắm chua Bạc Liêu</a>
+                            <a href="#">Bánh tét lá cẩm</a>
+                            <a href="#">Khô cá</a>
+                            <a href="#">Lạp xưởng Cần Đước</a>
+                            <a href="#">Cơm cháy chà bông</a>
+                            <a href="#">Nem chua Lái Thiêu</a>
+                            <a href="#">MẮM CHÂU ĐỐC</a>
+                        </div>
+                        <div class="column">
+                            <h3>Đồ Ăn Vặt</h3>
+                            <a href="#">KẸO DỪA BẾN TRE</a>
+                            
+                            <a href="#">Bánh tráng sữ</a>
+                            <a href="#">Quả mây ga</a>
+                            <a href="#">Bánh pía</a>                       
+                            <a href="#">Trái cây miệt vườn</a>
+                            <a href="#">Hạt điều rang muối</a>
+                            <a href="#">Bánh bông lan trứng muối</a>
+                            <a href="#">Cơm cháy chà bông</a>
+                            <a href="#">Đường thốt nốt An Giang</a>
+                        </div>
+                        <div class="column">
+                            <h3>Đồ Uống</h3>                       
+                            <a href="#">Rượu bưởi Đồng Nai</a>                     
+                            <a href="#">Rượu sim Phú Quốc</a>                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn" href="#news">ĐỒ UỐNG</a>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn" href="#news">ĐỒ ĂN VẶT</a>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn" href="#news">LẨU-NƯỚNG</a>
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn" href="#news">BUFFET</a>
+            </div>
+        </div>
         </ul>
-    </nav>
+            </div>
 
-    <section id="home" class="hideable-section">
-        <div>Home content</div>
-    </section>
+            <div class="ảnh">
+                <img src="images/banner1.jpg" alt="" width="94%" height="400" style="float:center;padding-top: 20px;margin: 20px 20px 20px 20px ;"/>
+                <img src="images/banner2.png" alt="" width="48%" height="500" style="float: left;margin-left:20px;margin-bottom:20px ;"/>
+                <img src="images/banner3.png" alt="" width="48%" height="500" style="float: left;margin-right:20px;margin-bottom:20px ;"/>
+            </div>
+            
+            <div class="sản phẩm">
+                <div style="color: #DC143C"><center><strong>TOP các món HOT nhất/ MỚI nhất</strong></center></div>
+                <div style="margin-left: 20px;color: #f1900f"><h2>MÓN BẮC</h2></div>
+                <div class="monan">
+                    <a class="sp" href="#"><img src="images/bac6.jpg" alt="" width="290" height="300px"/></a>
+                    <a class="sp" href="#"><img src="images/bac7.jpg" alt="" width="290" height="300px"/></a>
+                    <a class="sp" href="#"><img src="images/bac8.jpg" alt="" width="290" height="300px"/></a>
+                    <a class="sp" href="#"><img src="images/bac5.jpg" alt="" width="290" height="300px"/></a>
+                </div>
+            </div class="tenmonan">
+                <div class="ten">
+                    <p class="tensp">Cốm làng Vòng</p>
+                    <h2 class="giasp">50.000đ</h2>
+                    <button>Đặt hàng</button>
+                </div>
+                <div class="ten">
+                    <p class="tensp">Cá kho làng Vũ Đại Hà Nam</p>
+                    <h2 class="giasp">1.000.000đ</h2>
+                    <button>Đặt hàng</button>
+                </div>
+                <div class="ten">
+                    <p class="tensp">Rượu cần</p>
+                    <h2 class="giasp">500.000đ</h2>
+                    <button>Đặt hàng</button>
+                </div>
+                <div class="ten">
+                    <p class="tensp">Cơm lam</p>
+                    <h2 class="giasp">100.000đ</h2>
+                    <button>Đặt hàng</button>
+                </div>
+                </div>
+            <div style="margin-left: 20px;color:#f1900f"><h2>MÓN TRUNG</h2></div>
+            <div class="monan">
+                <a class="sp" href="#"><img src="images/trung3.jpg" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/trung7.jpg" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/trung8.jpg" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/trung4.jpg" alt="" width="290" height="300px"/></a>
+            </div>
+        </div class="tenmonan">
+        <div class="ten">
+            <p class="tensp">Bánh căn</p>
+            <h2 class="giasp">40.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Bánh ít lá gai</p>
+            <h2 class="giasp">10.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Trà Cung đình Huế</p>
+            <h2 class="giasp">100.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Bánh xèo</p>
+            <h2 class="giasp">30.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        </div>
+        <div style="margin-left: 20px;color:#f1900f"><h2>MÓN NAM</h2></div>
+            <div class="monan">
+                <a class="sp" href="#"><img src="images/nam2.jpeg" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/nam3.jpg" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/nam6.jpg" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/nam4.jpg" alt="" width="290" height="300px"/></a>
+            </div>
+        </div class="tenmonan">
+        <div class="ten">
+            <p class="tensp">Bánh tét lá cẩm</p>
+            <h2 class="giasp">90.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Lạp xưởng Cần Đước</p>
+            <h2 class="giasp">300.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Trái cây miệt vườn</p>
+            <h2 class="giasp">50.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Mắm Châu Đốc</p>
+            <h2 class="giasp">160.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        </div>
+        <div style="margin-left: 20px;color:#f1900f"><h2>ĐỒ ĂN VẶT YÊU THÍCH</h2></div>
+            <div class="monan">
+                <a class="sp" href="#"><img src="images/vat1.png" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/vat2.png" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/vat3.png" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/vat4.png" alt="" width="290" height="300px"/></a>
+            </div>
+        </div class="tenmonan">
+        <div class="ten">
+            <p class="tensp">Kimbap</p>
+            <h2 class="giasp">30.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">bánh cookie trà xanh</p>
+            <h2 class="giasp">20.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Đá bào kem dâu</p>
+            <h2 class="giasp">35.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Bánh tráng nướng</p>
+            <h2 class="giasp">10.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        </div>
+        <div style="margin-left: 20px;color:#f1900f"><h2>ĐỒ UỐNG YÊU THÍCH</h2></div>
+            <div class="monan">
+                <a class="sp" href="#"><img src="images/uong1.png" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/uong2.png" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/uong3.png" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/uong4.png" alt="" width="290" height="300px"/></a>
+            </div>
+        </div class="tenmonan">
+        <div class="ten">
+            <p class="tensp">Trà sữa trân châu đường đen kem cheese</p>
+            <h2 class="giasp">70.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Mía dầm sữa chua</p>
+            <h2 class="giasp">20.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Chè các loại</p>
+            <h2 class="giasp">15.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Caffe trứng</p>
+            <h2 class="giasp">30.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        </div>
+        <div style="margin-left: 20px;color:#f1900f"><h2>LẨU NƯỚNG BUFET - ĂN LÀ MÊ</h2></div>
+            <div class="monan">
+                <a class="sp" href="#"><img src="images/lau1.png" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/lau2.png" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/lau3.png" alt="" width="290" height="300px"/></a>
+                <a class="sp" href="#"><img src="images/lau4.png" alt="" width="290" height="300px"/></a>
+            </div>
+        </div class="tenmonan">
+        <div class="ten">
+            <p class="tensp">Bufet nướng</p>
+            <h2 class="giasp">399.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Buffet lẩu</p>
+            <h2 class="giasp">290.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Combo lẩu hải sản</p>
+            <h2 class="giasp">300.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        <div class="ten">
+            <p class="tensp">Combo nướng</p>
+            <h2 class="giasp">350.000đ</h2>
+            <button>Đặt hàng</button>
+        </div>
+        </div>
+        </div>
 
-    <section id="services" class="hideable-section">
-        <div>Services content</div>
-    </section>
+        <div>
+            <img src="images/banner4.jpg" alt="" width="55%" height="350" style="float: left;margin-left: 20px;margin-bottom:100px ;" />
+            <img src="images/banner5.jpg" alt="" width="40%" height="400" style="float: right;margin-right: 20px;margin-bottom:20px ;" />
+        </div>
+        <div class="chantrang">
 
-    <section id="about" class="hideable-section">
-        <div>About content</div>
-    </section>
-
-    <section id="link1" class="hideable-section">
-        <div>Link1 content</div>
-    </section>
-
-    <section id="link2" class="hideable-section">
-        <div>Link2 content</div>
-    </section>
-
-    <section id="link3" class="hideable-section">
-        <div>Link3 content</div>
-    </section>
-
-    <script>
-        $(function() {
-            $('nav ul li a').click(function() {
-                // Lấy section để hiển thị
-                var $section = $('#' + $(this).data('section'));
-
-                // Nếu đang hiện thì không làm gì.
-                // Nếu không, ẩn tất cả các se cho hiện (kiểu fade in) phần mong muốn.
-                if (!$section.is(':visible')) {
-                    $('.hideable-section').hide();
-                    $section.fadeIn();
-                }
-            });
-        });
-    </script>
+            <div class="chan1">
+                <a>GIỚI THIỆU</a>
+                <p>Review Food-Chuyên ẩm thực Việt</p>
+                <p>Ngon-Rẻ-Chuyên Nghiệp-Tận Tâm-Chất Lượng Cao</p>
+            </div>
+            <div class="chan2">
+                <a>CHÍNH SÁCH</a>
+                <p>Giảm 10% vào ngày sinh nhật</p>
+                <p>Đi 4 tặng 1 tính tiền 3 </p>
+                <p>Các ngày lễ giảm giá 10% </p>
+            </div>
+            <div class="chan3">
+                <a>LIÊN HỆ</a>
+                <p>Số ĐT: 0345030327</p>
+                <p>Gmail: thuluyennguyen20@gmail.com</p>
+                <a href="https://www.facebook.com/luyenabc" target="_blank">Facebook: Nguyễn Thu Luyến</a>
+            </div>
+            <div class="chan4">
+                <a>ĐỊA CHỈ</a>
+                <p>Việt Hùng, Đông Anh, Hà Nội</p>
+            </div>
+        
+    </div>
 </body>
 
 </html>
